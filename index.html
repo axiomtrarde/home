@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>axiomtrarde — Coffee Services</title>
+  <meta name="description" content="Axiomtrarde — Premium coffee services: wholesale, cafes, training and global locations." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#d97706;
+      --muted:#93c5fd;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max:1100px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%,var(--bg) 100%);color:#e6eef8}
+    .container{max-width:var(--max);margin:32px auto;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#fb923c);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021;font-size:20px}
+    .brand{line-height:1}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.6px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav{margin-left:auto;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
+    .btn.secondary{border-color:transparent;background:var(--glass)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:stretch;margin-top:26px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);padding:20px;box-shadow:0 6px 24px rgba(2,6,23,0.6);}
+    .hero-left h2{margin:0 0 8px 0;font-size:28px}
+    .hero-left p{margin:0;color:#cfe7ff}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .service{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);min-height:120px}
+    .service h3{margin:0 0 8px 0}
+    .service p{margin:0;color:#bcd9ff;font-size:13px}
+
+    .locations{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+    .loc-card{display:flex;gap:14px;align-items:flex-start}
+    .loc-thumb{width:120px;height:84px;border-radius:10px;background:linear-gradient(135deg,#123 0%,#234 100%);display:flex;align-items:center;justify-content:center;font-weight:600}
+    .loc-body h4{margin:0 0 6px 0}
+    .loc-body p{margin:0;font-size:13px;color:#cfe7ff}
+    .hours{margin-top:8px;font-size:13px;color:var(--muted)}
+
+    .hours-table{width:100%;border-collapse:collapse;margin-top:12px}
+    .hours-table th,.hours-table td{padding:8px 10px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.03);font-size:13px}
+
+    footer{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}
+      .locations{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    @media (max-width:520px){
+      .services{grid-template-columns:1fr}
+    }
+
+    /* small utility */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
+    .small{font-size:13px;color:#bcd9ff}
+
+    /* location time widget */
+    .time-now{font-weight:700;font-size:14px}
+    .tz-select{width:100%;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:inherit}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-label="axiomtrarde logo">
+        <div class="mark">A</div>
+        <div class="brand">
+          <h1>axiomtrarde</h1>
+          <p>Global Coffee Services — specialty beans & solutions</p>
+        </div>
+      </div>
+      <nav>
+        <button class="btn">Services</button>
+        <button class="btn">Locations</button>
+        <button class="btn secondary">Contact</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card hero-left">
+        <h2>Premium coffee services for businesses & cafes</h2>
+        <p>axiomtrarde provides ethically sourced specialty coffee, cafe consulting, wholesale supply, and barista training wherever you operate — from Bogotá to Tokyo.</p>
+
+        <div class="services" aria-hidden="false">
+          <div class="service">
+            <h3>Wholesale Supply</h3>
+            <p>Single-origin lots and custom blends. Packaging and logistics for regional distributors and cafe chains.</p>
+            <div class="small" style="margin-top:8px">MOQ: 25 kg · Lead time: 2–4 weeks</div>
+          </div>
+          <div class="service">
+            <h3>Cafe Consulting</h3>
+            <p>Menu design, equipment selection, workflow optimization and cost modelling to help your cafe thrive.</p>
+          </div>
+          <div class="service">
+            <h3>Training & Events</h3>
+            <p>Barista courses, latte art workshops and sensory cuppings — both in-person and online.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+          <a href="#locations" class="btn">Explore locations</a>
+          <a href="#contact" class="btn secondary">Get a quote</a>
+        </div>
+
+      </div>
+
+      <aside class="card" aria-label="Quick contact & timezone">
+        <h3 style="margin-top:0">Quick contact</h3>
+        <p class="small">Email: <span class="muted">hello@axiomtrarde.coffee</span></p>
+        <p class="small">Phone: <span class="muted">+1 (555) 823-0192</span></p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+
+        <label for="tz" class="small">Check local time at a branch</label>
+        <select id="tz" class="tz-select" aria-label="Select timezone">
+          <option value="America/Bogota">Bogotá, Colombia (America/Bogota)</option>
+          <option value="America/New_York">New York, USA (America/New_York)</option>
+          <option value="Europe/London">London, UK (Europe/London)</option>
+          <option value="Europe/Paris">Paris, France (Europe/Paris)</option>
+          <option value="Asia/Tokyo">Tokyo, Japan (Asia/Tokyo)</option>
+          <option value="Australia/Sydney">Sydney, Australia (Australia/Sydney)</option>
+          <option value="Africa/Johannesburg">Johannesburg, RSA (Africa/Johannesburg)</option>
+        </select>
+
+        <div style="margin-top:12px">
+          <div class="muted">Local time</div>
+          <div id="localTime" class="time-now">—:—</div>
+          <div class="small muted" style="margin-top:8px">Times shown in 24-hour format. Opening hours below are local to each branch.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="locations" class="card" style="margin-top:22px">
+      <h3 style="margin-top:0">Global locations & opening hours</h3>
+      <p class="small">We operate flagship cafes and partnerships across multiple continents. Below are representative locations with typical opening periods — please contact the local branch for holidays and special hours.</p>
+
+      <div class="locations">
+        <div class="loc-card">
+          <div class="loc-thumb">BOG</div>
+          <div class="loc-body">
+            <h4>Axiomtrarde Bogotá — Café & Roastery</h4>
+            <p>Cra. 7 #85-10, Bogotá, Colombia · Phone: +57 1 555 0132</p>
+            <div class="hours">Mon–Fri: 07:00–19:00 · Sat: 08:00–17:00 · Sun: 09:00–15:00 · Timezone: America/Bogota</div>
+          </div>
+        </div>
+
+        <div class="loc-card">
+          <div class="loc-thumb">NYC</div>
+          <div class="loc-body">
+            <h4>Axiomtrarde New York — Wholesale Hub</h4>
+            <p>123 Hudson St, New York, NY, USA · Phone: +1 212 555 0128</p>
+            <div class="hours">Mon–Fri: 06:30–18:30 · Sat: 07:30–16:00 · Sun: Closed · Timezone: America/New_York</div>
+          </div>
+        </div>
+
+        <div class="loc-card">
+          <div class="loc-thumb">LDN</div>
+          <div class="loc-body">
+            <h4>Axiomtrarde London — Training Studio</h4>
+            <p>14 Portobello Rd, London, UK · Phone: +44 20 7946 0123</p>
+            <div class="hours">Mon–Fri: 08:00–18:00 · Sat: 09:00–16:00 · Sun: Closed · Timezone: Europe/London</div>
+          </div>
+        </div>
+
+        <div class="loc-card">
+          <div class="loc-thumb">PAR</div>
+          <div class="loc-body">
+            <h4>Axiomtrarde Paris — Partner Cafe</h4>
+            <p>27 Rue de la Croix, Paris, France · Phone: +33 1 44 55 01 22</p>
+            <div class="hours">Mon–Fri: 08:00–19:00 · Sat–Sun: 09:00–17:00 · Timezone: Europe/Paris</div>
+          </div>
+        </div>
+
+        <div class="loc-card">
+          <div class="loc-thumb">TYO</div>
+          <div class="loc-body">
+            <h4>Axiomtrarde Tokyo — Specialty Outlet</h4>
+            <p>2-3-4 Shibuya, Tokyo, Japan · Phone: +81 3-5555-0192</p>
+            <div class="hours">Mon–Fri: 08:00–20:00 · Sat: 09:00–18:00 · Sun: 09:00–16:00 · Timezone: Asia/Tokyo</div>
+          </div>
+        </div>
+
+        <div class="loc-card">
+          <div class="loc-thumb">SYD</div>
+          <div class="loc-body">
+            <h4>Axiomtrarde Sydney — Distribution</h4>
+            <p>88 Harbour St, Sydney, Australia · Phone: +61 2 5550 0192</p>
+            <div class="hours">Mon–Fri: 07:00–17:00 · Sat: 08:00–14:00 · Sun: Closed · Timezone: Australia/Sydney</div>
+          </div>
+        </div>
+      </div>
+
+      <table class="hours-table" aria-label="Detailed opening hours">
+        <thead>
+          <tr><th>Service</th><th>Typical Hours</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Retail (flagship cafes)</td><td>Mon–Sat 07:00–19:00 · Sun 09:00–16:00</td><td>Subject to local laws and holidays</td></tr>
+          <tr><td>Wholesale & Distribution</td><td>Mon–Fri 08:00–18:00</td><td>Logistics windows vary by region</td></tr>
+          <tr><td>Barista Training</td><td>Mon–Sat 09:00–17:00</td><td>Book ahead: classes run weekly</td></tr>
+          <tr><td>Corporate Events & Cuppings</td><td>By appointment</td><td>Available worldwide</td></tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <section id="contact" class="card" style="margin-top:20px">
+      <h3 style="margin-top:0">Contact & inquiries</h3>
+      <p class="small">For quotations, supply requests, or to book training: fill the form or email <span class="muted">hello@axiomtrarde.coffee</span>. We respond to business inquiries within 48 hours.</p>
+
+      <form style="display:grid;grid-template-columns:1fr 280px;gap:12px;margin-top:12px" onsubmit="event.preventDefault();alert('Request sent — this is a demo form.');">
+        <div>
+          <label class="small">Full name</label>
+          <input type="text" required placeholder="Your name" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+          <label class="small" style="margin-top:8px;display:block">Email</label>
+          <input type="email" required placeholder="you@example.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+          <label class="small" style="margin-top:8px;display:block">Message</label>
+          <textarea placeholder="Tell us about your project" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+        </div>
+        <div>
+          <label class="small">Service interested in</label>
+          <select style="width:100%;padding:10px;border-radius:8px;margin-top:6px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:inherit">
+            <option>Wholesale</option>
+            <option>Cafe Consulting</option>
+            <option>Training</option>
+            <option>Events</option>
+          </select>
+
+          <div style="margin-top:14px" class="pill">Response time: ~48 hours</div>
+          <div style="margin-top:18px"><button class="btn" style="width:100%">Send inquiry</button></div>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div>
+        <div class="small">© <strong>axiomtrarde</strong> — Specialty Coffee & Services</div>
+        <div class="small muted">Built as a demo page · All hours indicative</div>
+      </div>
+      <div class="small muted">Follow: @axiomtrarde · hello@axiomtrarde.coffee</div>
+    </footer>
+  </div>
+
+  <script>
+    // show selected timezone local time
+    const tzSelect = document.getElementById('tz');
+    const localTime = document.getElementById('localTime');
+
+    function updateTime(){
+      const tz = tzSelect.value;
+      try{
+        const now = new Date();
+        const fmt = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:tz});
+        localTime.textContent = fmt.format(now) + ' (' + tz + ')';
+      }catch(e){
+        localTime.textContent = '--:--';
+      }
+    }
+
+    tzSelect.addEventListener('change', updateTime);
+    setInterval(updateTime,1000*30);
+    updateTime();
+  </script>
+</body>
+</html>
